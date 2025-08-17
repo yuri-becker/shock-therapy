@@ -46,7 +46,7 @@ Built using [BepInEx 5](https://github.com/BepInEx/BepInEx).
    
         ![Directory at \"steamapps/common/Rhythm Doctor\" containing: BepInEx (folder); libdoorstep.so; Rhythm Doctor; Rhythm Doctor_Data (folder); run_bepinex.sh; unity.lock; UnityPlayer.so; and User (folder).](Assets/Rhythm%20Doctor%20Folder.png)
       </details><br/>
-2. Download `li.yuri.rhythmdoctor.shocktherapy.dll` and **drop it into `BepinEx/plugins/`**.<br/>&nbsp;
+2. Download the latest `li.yuri.rhythmdoctor.shocktherapy.dll` from [Releases](https://github.com/yuri-becker/shock-therapy/releases) and **drop it into `BepinEx/plugins/`**.<br/>&nbsp;
 3. <details>
     <summary>Linux only − <strong>Make the game run with BepInEx</strong>:</summary>
    
