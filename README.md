@@ -4,7 +4,7 @@
 <div align="center">
 
   
-  <h1 align="center"><strong><img src="Assets/shock.png" alt="" aria-hidden><br/>ShockTherapy</strong></h1>
+  <h1 align="center"><strong><img src="Assets/shock.png" alt="" aria-hidden="true"><br/>ShockTherapy</strong></h1>
 
   <p align="center">
     Make missing notes in <a href="https://rhythmdr.com/">Rhythm Doctor</a> hurt − using a <a href="https://pishock.com/#/">PiShock</a>.
@@ -50,13 +50,13 @@ Built using [BepInEx 5](https://github.com/BepInEx/BepInEx).
 3. <details>
     <summary>Linux only − <strong>Make the game run with BepInEx</strong>:</summary>
    
-    1. **Mark `run_bepinex.sh` as executable**. You can do that via the terminal, or − in most file managers − right-clicking it and opening the properties.
-    2. If you are on Steam, set the game's **launch options** to `./run_bepinex.sh ./Rhythm\ Doctor`.<br/>
-       If you are not on Steam, configure whatever you use to launch the game to run that command too.
+    1. **Mark `run_bepinex.sh` as executable**. You can do that via the terminal or − in most file managers − by right-clicking it and opening the properties.
+    2. If you are on Steam, set the game's **launch options** to `echo %command% && ./run_bepinex.sh "Rhythm Doctor"` (See https://github.com/BepInEx/BepInEx/issues/1143).<br/>
+       If you are not on Steam, configure whatever you use to launch the game to run `./run_bepinex.sh "Rhythm Doctor"`.
     </details><br/>
 4. **Optionally**, you can also install [ConfigurationManager](https://github.com/BepInEx/BepInEx.ConfigurationManager) (pick the BepInEx5 version). This would give you an in-game overlay to configure ShockTherapy (and other BepInEx plugins). However, it did not work for me (let me know if you have better results).<br/>&nbsp;
 5. **Launch the game once** to verify you set up everything correctly:
-   * If BepInEx is installed correctly, the folder `BepInEx` should contain a filed called `LogOutput.log`.
+   * If BepInEx is installed correctly, the folder `BepInEx` should contain a file called `LogOutput.log`.
    * If ShockTherapy is installed correctly, there should be a file called `li.yuri.rhythmdoctor.shocktherapy.cfg` in `BepInEx/config`.<br/>&nbsp;
 6. **[Proceed to configuration](#configuration)**
 
@@ -65,7 +65,7 @@ Built using [BepInEx 5](https://github.com/BepInEx/BepInEx).
 If you installed ConfigurationManager, you can configure everything in-game. A restart might be necessary after configuration changes.
 
 Otherwise, after the game was run once with ShockTherapy installed, a configuration file exists at `BepInEx/config/li.yuri.rhythmdoctor.shocktherapy.cfg`.
-The options should are all be explained in the configuration file itself.
+The options are all explained in the configuration file itself.
 
 <details>
 <summary>Example Configuration</summary>
@@ -183,7 +183,7 @@ Shockers = 12345
 * [.NET SDK](https://dotnet.microsoft.com/en-us/)
 * [just](https://just.systems./man/en/) for running the project's scripts.
   * Those scripts currently are only made for linux. 
-* Obviously, the game [Rhythm Doctor](https://rhythmdr.com/).
+* The game [Rhythm Doctor](https://rhythmdr.com/).
 
 ## Setup
 
@@ -195,7 +195,7 @@ Shockers = 12345
 
 ## Code Structure
 
-* The entry point is `src/ShockTherapy.cs`. This is also where actual mod is contained and the lifecycle is managed.
+* The entry point is `src/ShockTherapy.cs`. This is also where the actual mod is contained and the lifecycle is managed.
 * `src/PiShock/` is where the models and infrastructure for talking to PiShock's API are.
 * `src/Config/` is the configuration models.
 
@@ -207,6 +207,6 @@ Some Caveats:
 
 # Contributions
 
-Bug Reports and feature suggestions are welcome. Just [create an issue](https://github.com/yuri-becker/shock-therapy/issues/new).
+Bug Reports and feature suggestions are welcome. [Create an issue](https://github.com/yuri-becker/shock-therapy/issues/new).
 
 I'll also happily look into any Pull Requests.
